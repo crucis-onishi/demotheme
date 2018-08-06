@@ -1,0 +1,417 @@
+/*
+Theme Name: demotheme
+Description: デモテーマ
+Version: 1.0.0
+Theme URI: http://localhost/wordpress/themes/demotheme/
+Author: オーニシ
+Author URI: https://denno-sekai.com/
+Tags: right-sidebar, blog
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: demotheme
+*/
+
+/*--------------------------------------------------------------
+1.0 Normalize
+Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
+--------------------------------------------------------------*/
+
+html {
+	font-family: sans-serif;
+	line-height: 1.15;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+	margin: 0;
+	background: #fff;
+    color: #333;
+}
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+	display: block;
+}
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    line-height: 1.4;
+    margin: 0 0 0.75em;
+    padding: 1.5em 0 0;
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+    padding-top: 0;
+}
+a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+}
+a:active,
+a:hover {
+	outline-width: 0;
+}
+a:visited {
+    color: #609;
+}
+abbr[title] {
+	border-bottom: 1px #767676 dotted;
+	text-decoration: none;
+}
+img {
+	border-style: none;
+}
+ul, ol {
+    margin: 0 0 1.5em;
+    padding: 0;
+}
+/* テーマチェック修正ここから */	
+.wp-caption,
+.gallery-caption {
+	color: #666;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-style: italic;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption-text {
+	margin: 0.8075em 0;
+}
+.sticky {
+	position: relative;
+}
+.bypostauthor > .comment-body > .comment-meta > .comment-author .avatar {
+	border: 1px solid #333;
+	padding: 2px;
+}
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* テーマチェック修正ここまで */
+/* インデックスここから */
+#page {
+    position: relative;
+    word-wrap: break-word;
+}
+/* インデックスここまで */
+/* ヘッダーここから */
+.site-header {
+    background-color: #fafafa;
+    position: relative;
+}
+.site-branding {
+    vertical-align: bottom;
+    padding: 3em 0;
+}
+.wrap {
+    max-width: 1000px;
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.site-title a {
+    color: #333;
+    text-decoration: none;
+}
+/* ヘッダーここまで */
+/* メインナビゲーションここから */
+.main-navigation {
+    margin-left: 0;
+    clear: both;
+    display: block;
+}
+.navigation-top {
+    font-size: 14px;
+    font-size: 0.875rem;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+}
+.navigation-top .wrap {
+    padding: 0.75em 2em;
+}
+.main-navigation ul {
+    display: block;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-navigation li {
+    display: inline-block;
+    position: relative;
+}
+.main-navigation a {
+    padding: 1em 1.25em;
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+}
+/* メインナビゲーションここまで */
+/* メインここから */
+.site-content-contain {
+    background-color: #fff;
+    position: relative;
+}
+.site-content {
+    padding: 5.5em 0 0;
+}
+#primary {
+    float: left;
+    width: 58%;
+}
+
+/* メインここまで */
+/* 投稿ナビゲーションここから */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+/* 投稿ナビゲーションここまで */
+/* サイドバーここから */
+#secondary {
+    float: right;
+    padding-top: 0;
+    width: 36%;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    padding: 0 0 2em;
+}
+.widget {
+    padding-bottom: 3em;
+}
+h3.widget-title {
+    font-size: 16px;
+    font-size: 1rem;
+    margin-bottom: 2em;
+}
+.widget ul {
+    list-style: none;
+    margin: 0;
+}
+.widget ul li, .widget ol li {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5em 0;
+}
+.widget ul li a {
+    text-decoration: none;
+}
+.wrap:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+/* サイドバーここまで */
+/* 個別記事ここから */
+article {
+    padding-bottom: 4em;
+}
+.entry-header {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em 0;
+    padding-top: 0;
+}
+.entry-header .entry-title {
+    margin-bottom: 0.25em;
+}
+.entry-title a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+.entry-content {
+    margin-left: auto;
+    margin-right: auto;
+}
+p {
+    margin: 0 0 1.5em;
+    padding: 0;
+}
+/* 個別記事ここまで */
+/* ページネーションここから */
+.pagination {
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 800;
+    padding: 2em 0 3em;
+    text-align: center;
+}
+.pagination a {
+    text-decoration: none;
+}
+.page-numbers {
+    display: inline-block;
+    padding: 0.5em 0.75em;
+}
+.page-numbers.current {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    color: #767676;
+    display: inline-block;
+}
+.pagination a
+/* ページネーションここまで */
+/* フッターここから */
+footer.site-footer {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin-top: 3em;
+    border-top: 1px solid #eee;
+}
+.site-footer .wrap {
+    padding-bottom: 1.5em;
+    padding-top: 2em;
+}
+/* フッターここまで */
+/* コメントここから */
+#comments {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em;
+    clear: both;
+    padding: 2em 0 0.5em;
+}
+.comments-title {
+    margin-bottom: 2.5em;
+    font-size: 20px;
+    font-size: 1.25rem;
+}
+.comment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.comment-body {
+    margin-left: 0;
+    color: #333;
+    font-size: 14px;
+    font-size: 0.875rem;
+    margin-bottom: 4em;
+}
+footer.comment-meta {
+    margin-bottom: 1.5em;
+}
+.comment-author {
+    font-size: 16px;
+    font-size: 1rem;
+    margin-bottom: 0.4em;
+    position: relative;
+    z-index: 2;
+}
+.bypostauthor > .comment-body > .comment-meta > .comment-author .avatar {
+    border: 1px solid #333;
+    padding: 2px;
+}
+.comment-author .avatar {
+    border: 1px solid #333;
+    padding: 2px;
+    height: 50px;
+    left: -65px;
+    position: absolute;
+    width: 50px;
+}
+.comment-metadata {
+    color: #767676;
+    font-size: 10px;
+    font-size: 0.625rem;
+    font-weight: 800;
+    letter-spacing: 0.1818em;
+    text-transform: uppercase;
+}
+.comment-meta {
+    margin-bottom: 1.5em;
+}
+/* コメントここまで */
+/* コメントフォームここから */
+label {
+    color: #333;
+    display: block;
+    font-weight: 800;
+    margin-bottom: 0.5em;
+}
+textarea {
+    font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    background: #fff;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    border: 1px solid #bbb;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display: block;
+    padding: 0.7em;
+    width: 100%;
+    font-weight: 400;
+    overflow: auto;
+    margin: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+p.form-submit {
+    text-align: right;
+}
+input[type="submit"] {
+    background-color: #222;
+    border: 0;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: 800;
+    line-height: 1;
+    padding: 1em 2em;
+    text-shadow: none;
+    -webkit-transition: background 0.2s;
+    transition: background 0.2s;
+    -webkit-appearance: button;
+}
+input {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    font-weight: 400;
+    overflow: visible;
+    margin: 0;
+}
+/* コメントフォームここまで */
